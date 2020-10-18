@@ -1,0 +1,36 @@
+//Colors Variables
+$black-color: #2A2025;
+$white-color: #F7F0F0;
+$dark-blue: #0a1128;
+$purple-color: #4e2279;
+
+//Fonts
+$main-font: 'Open Sans', sans-serif;
+$title-font: 'Luckiest Guy', cursive;
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $main-font;
+  line-height: 1.8;
+  background: $dark-blue;
+  height: 100vh;
+  position: relative;
+}
+
+h1, h2, h3 {
+  font-family: $title-font;
+  margin: 0;
+}
+
+a, a:link, a:visited {text-decoration: none;}

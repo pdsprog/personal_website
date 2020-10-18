@@ -1,0 +1,120 @@
+.header {
+  background-color: $black-color;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  transform: translateY(-100%) rotate(180deg);
+  transition: all .7s;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+
+  @media(min-width: 768px) {
+    transform: translateY(0);
+    height: 6rem;
+    grid-template-columns: 6rem repeat(4, 1fr);
+    grid-template-rows: 6rem;
+    grid-template-areas: "logo navbar navbar navbar navbar";
+    border-bottom: .1rem solid $black-color;
+    box-shadow: 0 0 .5rem $black-color;
+  }
+
+  &_logo {
+    background-color: orange;
+    @include flex(column, center, center);
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media(min-width: 768px) {
+      position: relative;
+      bottom: initial;
+      left: initial;
+      transform: translate(0, 0);
+      grid-area: logo;
+      align-self: center;
+      margin: auto;
+    }
+
+    &--img {width: 90%;}
+  }
+
+  &_navbar {
+
+    @media(min-width: 768px) {
+      @include flex(column, center, center);
+      height: 100%;
+      grid-area: navbar;
+      align-self: center;
+      justify-self: flex-end;
+      padding-right: 1rem;
+    }
+
+
+    &--item {
+      font-family: $title-font;
+      list-style-type: none;
+      font-size: 4rem;
+      letter-spacing: .2rem;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 1rem 0;
+
+      @media(min-width: 768px) {
+        display: inline-block;
+        font-size: 1.8rem;
+        margin: 0 1.5rem;
+        backface-visibility: hidden;
+        transition: all .5s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+      
+      &_link {
+        color: $white-color;
+        font-weight: bold;
+        backface-visibility: hidden;
+        transition: all .1s;
+
+        &:hover {
+          border-bottom: .1rem solid $white-color;
+        }
+      }
+    }
+  }
+
+  &_menuOn {
+    transform: translateY(0) rotate(0deg);
+    transition: all 1s;
+  }
+}
+
+.mobile_menu {
+  @include flex(column, center, center);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  transform: rotate(0deg);
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 3;
+
+  @media(min-width: 768px) {display: none;}
+
+
+  &--icon {
+    font-size: 5rem; 
+    color: $white-color;
+    transition: all .5s;
+  }
+
+  &--rotate {transform: rotate(180deg); transition: all .5s;}
+}
