@@ -10,6 +10,7 @@ You can see the online version of it [here](https://paulods.netlify.app/).
 
 * HTML
 * CSS
+* SASS
 * JavaScript
 
 ## Authors

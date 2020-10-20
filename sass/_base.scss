@@ -1,7 +1,7 @@
 //Colors Variables
 $black-color: #2A2025;
 $white-color: #F7F0F0;
-$dark-blue: #0a1128;
+$dark-grey: #454545;
 $purple-color: #4e2279;
 
 //Fonts
@@ -23,14 +23,12 @@ html {
 body {
   font-family: $main-font;
   line-height: 1.8;
-  background: $dark-blue;
+  background:$dark-grey;
   height: 100vh;
   position: relative;
+  overflow-x: hidden;
 }
 
-h1, h2, h3 {
-  font-family: $title-font;
-  margin: 0;
-}
+h1, h2, h3 {font-family: $title-font;}
 
 a, a:link, a:visited {text-decoration: none;}

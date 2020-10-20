@@ -1,1 +1,80 @@
+$animation-duration: 1.5s;
 
+.animate_zoomInLeft {
+	-webkit-animation-name: zoomInLeft;
+  animation-name: zoomInLeft;
+  animation-duration: $animation-duration;
+	animation-fill-mode: both;
+}
+
+.animate_zoomInRight {
+	-webkit-animation-name: zoomInRight;
+  animation-name: zoomInRight;
+  animation-duration: $animation-duration;
+	animation-fill-mode: both;
+}
+
+.animate_jackInTheBox {
+	-webkit-animation-name: jackInTheBox;
+  animation-name: jackInTheBox;
+  animation-duration: $animation-duration;
+	animation-fill-mode: both;
+}
+
+
+@keyframes zoomInLeft {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+		transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+		-webkit-animation-timing-function: cubic-bezier(.55, .055, .675, .19);
+		animation-timing-function: cubic-bezier(.55, .055, .675, .19)
+	}
+	60% {
+		opacity: 1;
+		-webkit-transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+		transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+		-webkit-animation-timing-function: cubic-bezier(.175, .885, .32, 1);
+		animation-timing-function: cubic-bezier(.175, .885, .32, 1)
+	}
+}
+
+@keyframes zoomInRight {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
+		transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
+		-webkit-animation-timing-function: cubic-bezier(.55, .055, .675, .19);
+		animation-timing-function: cubic-bezier(.55, .055, .675, .19)
+	}
+	60% {
+		opacity: 1;
+		-webkit-transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
+		transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
+		-webkit-animation-timing-function: cubic-bezier(.175, .885, .32, 1);
+		animation-timing-function: cubic-bezier(.175, .885, .32, 1)
+	}
+}
+
+@keyframes jackInTheBox {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(.1) rotate(30deg);
+		transform: scale(.1) rotate(30deg);
+		-webkit-transform-origin: center bottom;
+		transform-origin: center bottom
+	}
+	50% {
+		-webkit-transform: rotate(-10deg);
+		transform: rotate(-10deg)
+	}
+	70% {
+		-webkit-transform: rotate(3deg);
+		transform: rotate(3deg)
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1)
+	}
+}
