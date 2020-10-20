@@ -22,16 +22,15 @@
   }
 
   &_logo {
-    background-color: orange;
     @include flex(column, center, center);
-    height: 5rem;
-    width: 5rem;
+    width: 12rem;
     position: absolute;
-    bottom: 2rem;
+    bottom: .5rem;
     left: 50%;
     transform: translate(-50%, -50%);
 
     @media(min-width: 768px) {
+      width: 6rem;
       position: relative;
       bottom: initial;
       left: initial;
@@ -41,7 +40,7 @@
       margin: auto;
     }
 
-    &--img {width: 90%;}
+    &--img {width: 100%;}
   }
 
   &_navbar {

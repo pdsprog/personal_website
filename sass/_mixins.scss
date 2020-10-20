@@ -4,3 +4,29 @@
   align-items: $align;
   justify-content: $justify;
 }
+
+@mixin section-title {
+  font-size: 6rem;
+  margin: auto;
+  letter-spacing: .2rem;
+
+  @media(min-width: 768px) {font-size: 7rem;}
+  @media(min-width: 1440px) {font-size: 8rem;}
+}
+
+@mixin sub-title {
+  font-size: 3rem;
+  margin: auto;
+  grid-column: 1/-1;
+  letter-spacing: .2rem;
+
+  @media(min-width: 768px) {font-size: 4rem;}
+}
+
+@mixin section-text {
+  font-size: 1.7rem;
+  padding: 1rem 1.5rem;
+  text-align: justify;
+
+  @media(min-width: 768px) {font-size: 1.8rem;}
+}

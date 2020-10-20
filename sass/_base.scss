@@ -23,12 +23,12 @@ html {
 body {
   font-family: $main-font;
   line-height: 1.8;
-  background:$dark-grey;
+  background: $dark-grey;
   height: 100vh;
   position: relative;
   overflow-x: hidden;
 }
 
-h1, h2, h3 {font-family: $title-font;}
+h1, h2, h3 {font-family: $title-font; text-transform: uppercase;}
 
 a, a:link, a:visited {text-decoration: none;}

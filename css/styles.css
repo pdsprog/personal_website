@@ -81,7 +81,8 @@ body {
   overflow-x: hidden; }
 
 h1, h2, h3 {
-  font-family: "Luckiest Guy", cursive; }
+  font-family: "Luckiest Guy", cursive;
+  text-transform: uppercase; }
 
 a, a:link, a:visited {
   text-decoration: none; }
@@ -108,19 +109,18 @@ a, a:link, a:visited {
       border-bottom: 0.1rem solid #2A2025;
       box-shadow: 0 0 0.5rem #2A2025; } }
   .header_logo {
-    background-color: orange;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 5rem;
-    width: 5rem;
+    width: 12rem;
     position: absolute;
-    bottom: 2rem;
+    bottom: .5rem;
     left: 50%;
     transform: translate(-50%, -50%); }
     @media (min-width: 768px) {
       .header_logo {
+        width: 6rem;
         position: relative;
         bottom: initial;
         left: initial;
@@ -129,7 +129,7 @@ a, a:link, a:visited {
         align-self: center;
         margin: auto; } }
     .header_logo--img {
-      width: 90%; }
+      width: 100%; }
   @media (min-width: 768px) {
     .header_navbar {
       display: flex;
@@ -208,6 +208,7 @@ a, a:link, a:visited {
     background-image: url("../img/home.svg");
     background-position: right;
     background-size: cover;
+    background-attachment: fixed;
     opacity: 0.1; }
     @media (min-width: 1200px) {
       .home_overlay {
@@ -280,3 +281,148 @@ a, a:link, a:visited {
       @media (min-width: 1600px) {
         .home_text--job {
           font-size: 4.5rem; } }
+
+.about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #2A2025;
+  background-image: url("../img/about-bg.svg");
+  background-size: cover;
+  background-position: center; }
+  @media (min-width: 1440px) {
+    .about {
+      height: calc(100vh - 6rem); } }
+  .about_content {
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: 100%;
+    padding: 2rem 0;
+    margin: auto; }
+    @media (min-width: 768px) {
+      .about_content {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "title title"  "image skills"  "text text"  "social social"; } }
+    @media (min-width: 1200px) {
+      .about_content {
+        width: 90%;
+        padding: 0;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: "title title title title title title" "image image image skills skills skills" "text text text social social social"; } }
+    @media (min-width: 1600px) {
+      .about_content {
+        width: 85%; } }
+    .about_content--title {
+      font-size: 6rem;
+      margin: auto;
+      letter-spacing: .2rem;
+      align-self: center;
+      justify-self: center; }
+      @media (min-width: 768px) {
+        .about_content--title {
+          font-size: 7rem; } }
+      @media (min-width: 1440px) {
+        .about_content--title {
+          font-size: 8rem; } }
+      @media (min-width: 768px) {
+        .about_content--title {
+          grid-area: title; } }
+    .about_content--img {
+      width: 85%;
+      margin: 5rem auto;
+      border-radius: .5rem; }
+      @media (min-width: 768px) {
+        .about_content--img {
+          grid-area: image; } }
+      @media (min-width: 1200px) {
+        .about_content--img {
+          width: 30rem;
+          height: 30rem;
+          margin: .5rem auto; } }
+    .about_content--text {
+      margin: auto; }
+      @media (min-width: 768px) {
+        .about_content--text {
+          grid-area: text;
+          width: 90%; } }
+      @media (min-width: 1600px) {
+        .about_content--text {
+          width: 80%; } }
+      .about_content--text_paragraph {
+        font-size: 1.7rem;
+        padding: 1rem 1.5rem;
+        text-align: justify; }
+        @media (min-width: 768px) {
+          .about_content--text_paragraph {
+            font-size: 1.8rem; } }
+    .about_content--skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      justify-content: center;
+      width: 85%;
+      height: 100%;
+      margin: 5rem auto;
+      align-self: center;
+      justify-self: center; }
+      @media (min-width: 768px) {
+        .about_content--skills {
+          grid-area: skills;
+          margin: auto;
+          grid-template-rows: 6rem;
+          height: 80%; } }
+      @media (min-width: 1200px) {
+        .about_content--skills {
+          width: 65%;
+          height: 100%; } }
+      @media (min-width: 1600px) {
+        .about_content--skills {
+          width: 55%; } }
+      .about_content--skills_title {
+        font-size: 3rem;
+        margin: auto;
+        grid-column: 1/-1;
+        letter-spacing: .2rem; }
+        @media (min-width: 768px) {
+          .about_content--skills_title {
+            font-size: 4rem; } }
+      .about_content--skills_icon {
+        font-size: 4rem;
+        color: #F7F0F0;
+        text-align: center;
+        margin: 2rem;
+        align-self: center;
+        justify-self: center; }
+        @media (min-width: 768px) {
+          .about_content--skills_icon {
+            margin: auto; } }
+    .about_content--social {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      justify-content: center;
+      width: 85%;
+      height: 100%;
+      margin: auto; }
+      @media (min-width: 768px) {
+        .about_content--social {
+          grid-area: social;
+          width: 30rem;
+          height: 15rem; } }
+      .about_content--social_title {
+        font-size: 3rem;
+        margin: auto;
+        grid-column: 1/-1;
+        letter-spacing: .2rem; }
+        @media (min-width: 768px) {
+          .about_content--social_title {
+            font-size: 4rem; } }
+      .about_content--social_link {
+        margin: auto; }
+        .about_content--social_link--icon {
+          font-size: 3.5rem;
+          color: #F7F0F0;
+          text-align: center; }

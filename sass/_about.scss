@@ -1,1 +1,151 @@
+.about {
+  @include flex(row, center, center);
+  background-color: $black-color;
+  background-image: url('../img/about-bg.svg');
+  background-size: cover;
+  background-position: center;
 
+  @media(min-width: 1440px) {
+    height: calc(100vh - 6rem);
+  }
+
+  &_content {
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: 100%;
+    padding: 2rem 0;
+    margin: auto;
+
+    @media(min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: 
+        "title title" 
+        "image skills" 
+        "text text" 
+        "social social";
+    }
+
+    @media(min-width: 1200px) {
+      width: 90%;
+      padding: 0;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-areas: 
+        "title title title title title title"
+        "image image image skills skills skills"
+        "text text text social social social"
+        ;
+    }
+
+    @media(min-width: 1600px) {width: 85%;}
+
+    &--title {
+      @include section-title;
+      align-self: center;
+      justify-self: center;
+
+      @media(min-width: 768px) {
+        grid-area: title;
+      }
+    }
+
+
+    &--img {
+      width: 85%;
+      margin: 5rem auto;
+      border-radius: .5rem;
+
+      @media(min-width: 768px) {grid-area: image;}
+      @media(min-width: 1200px) {
+        width: 30rem;
+        height: 30rem;
+        margin: .5rem auto;
+      }
+    }
+
+    &--text {
+      margin: auto;
+
+      @media(min-width: 768px) {
+        grid-area: text;
+        width: 90%;
+      }
+
+      @media(min-width: 1600px) {width: 80%;}
+
+      &_paragraph {@include section-text}
+    }
+
+    &--skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      justify-content: center;
+      width: 85%;
+      height: 100%;
+      margin: 5rem auto;
+      align-self: center;
+      justify-self: center;
+
+      @media(min-width: 768px) {
+        grid-area: skills;
+        margin: auto;
+        grid-template-rows: 6rem;
+        height: 80%;
+      }
+
+      @media(min-width: 1200px) {
+        width: 65%;
+        height: 100%;
+      }
+
+      @media(min-width: 1600px) {
+        width: 55%;
+      }
+
+
+      &_title {@include sub-title}
+
+      &_icon {
+        font-size: 4rem;
+        color: $white-color;
+        text-align: center;
+        margin: 2rem;
+        align-self: center;
+        justify-self: center;
+
+        @media(min-width: 768px) {margin: auto;}
+      }
+    }
+
+    &--social {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      justify-content: center;
+      width: 85%;
+      height: 100%;
+      margin: auto;
+      
+      @media(min-width: 768px) {
+        grid-area: social;
+        width: 30rem;
+        height: 15rem;
+      }
+
+      &_title {@include sub-title}
+
+      &_link {
+        margin: auto;
+
+        &--icon {
+          font-size: 3.5rem;
+          color: $white-color;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+}

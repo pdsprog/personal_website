@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="./css/styles.css">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <title>Paulo da Silva || Front-End Developer</title>
 </head>
 <body>
@@ -13,9 +15,10 @@
     <i class="fas fa-chevron-circle-down mobile_menu--icon"></i>
   </div>
 
+  <!-- HEADER -->
   <header class="header">
     <section class="header_logo">
-      <img src="" alt="PS LOGO" class="header_logo--img">
+      <img src="./img/logo.png" alt="PS LOGO" class="header_logo--img">
     </section>
     <nav class="header_navbar">
       <ul>
@@ -35,6 +38,7 @@
     </nav>
   </header>
 
+  <!-- MAIN -->
   <main class="main">
     <!-- HOME -->
     <section class="home" id="home">
@@ -46,6 +50,53 @@
         <h1 class="home_text--name animate_zoomInLeft">Paulo da Silva</h1>
         <h2 class="home_text--job animate_zoomInRight">Front-End Developer</h2>
       </div>
+    </section>
+
+    <!-- ABOUT ME -->
+    <section class="about" id="about">
+      <div class="about_content" data-aos="zoom-in">
+        <h1 class="about_content--title">About Me</h1>
+        <img src="./img/paulo.jpg" alt="Paulo smiling" class="about_content--img">
+        <div class="about_content--text">
+          <p class="about_content--text_paragraph">
+            As a Front-End Developer, I focus on HTML, CSS, and JavaScript as this specifically applies to the UI. My specialties include CSS, JavaScript, React, and Node.
+          </p>
+          <p class="about_content--text_paragraph">
+            I'm a motivated individual who seeks to utilize my creative abilities and grow as a person. I love generating new ideas and seeing them through to completion. 
+          </p>
+          <p class="about_content--text_paragraph">
+            I'm also a geek guy who loves anime, comic books, food, games, music, sports and technology.
+          </p>
+        </div>
+        <div class="about_content--skills">
+          <h1 class="about_content--skills_title">Skills</h1>
+          <i class="fab fa-html5 about_content--skills_icon"></i>
+          <i class="fab fa-css3-alt about_content--skills_icon"></i>
+          <i class="fab fa-js-square about_content--skills_icon"></i>
+          <i class="fab fa-bootstrap about_content--skills_icon"></i>
+          <i class="fab fa-sass about_content--skills_icon"></i>
+          <i class="fab fa-gulp about_content--skills_icon"></i>
+          <i class="fab fa-node-js about_content--skills_icon"></i>
+          <i class="fab fa-git-alt about_content--skills_icon"></i>
+        </div>
+        <div class="about_content--social">
+          <h1 class="about_content--social_title">Social Media</h1>
+          <a href="" class="about_content--social_link" target="_blank">
+            <i class="fab fa-github-square about_content--social_link--icon"></i>
+          </a>
+          <a href="" class="about_content--social_link" target="_blank">
+            <i class="fab fa-linkedin about_content--social_link--icon"></i>
+          </a>
+          <a href="" class="about_content--social_link" target="_blank">
+            <i class="fab fa-twitter-square about_content--social_link--icon"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="portfolio" id="portfolio">
+      
     </section>
   </main>
 
