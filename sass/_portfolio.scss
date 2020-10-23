@@ -1,1 +1,89 @@
+.portfolio {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100%;
+  margin: 10rem auto;
 
+  &_title {@include section-title; padding-top: 5rem;}
+
+  &_paragraph {@include section-paragraph}
+
+  &_cards {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem auto 0;
+
+    @media(min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 5rem;
+      width: 80%;
+    }
+
+    @media(min-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 0 5rem;
+    }
+
+    &--card {
+      width: 25rem;
+      height: 30rem;
+      position: relative;
+      cursor: pointer;
+      align-self: center;
+      justify-self: center;
+      
+
+      &_front {
+        @include flex(row, center, center);
+        width: 25rem;
+        height: 25rem;
+        background-color: orange;
+        position: absolute;
+        
+        &--img {width: 100%;}
+      }
+
+      &_back {
+        @include flex(column, center, space-around);
+        width: 25rem;
+        height: 0;
+        opacity: 0;
+        background-color: green;
+        transition: all .5s;
+
+        &--title {
+          font-size: 3rem;
+          letter-spacing: .2rem;
+        }
+
+        &--live, &--code {
+          @include button;
+          width: 90%;
+          display: none;
+        }
+
+        &--live {background-color: $green-color;}
+
+        &--code {background-color: $blue-color;}
+      }
+    }
+  }
+
+  &_backCardOn {
+    height: 25rem;
+    opacity: 1;
+    position: absolute;
+    transition: all .5s;
+  }
+
+  &_displayButtons {
+    display: block;
+    opacity: 0.7;
+    transition: .5s;
+
+    &:hover {opacity: 1;}
+  }
+}
